@@ -7,7 +7,19 @@ class Search extends StatelessWidget {
       appBar: AppBar(
         title: Text('Forecaster - Search city'),
       ),
-      body: Text('search'),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: TextFormField(
+          decoration: InputDecoration(
+            border: UnderlineInputBorder(),
+            labelText: 'Search your city:',
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        tooltip: 'Increment',
+        child: Icon(Icons.search),
+      ),
     );
   }
 }
