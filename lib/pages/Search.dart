@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import './ForecastToday.dart';
+
 class Search extends StatelessWidget {
+  static final String pageRoute = '/';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +33,7 @@ class Search extends StatelessWidget {
       const searchParams = <String, Object>{
         'searchText': 'São Paulo',
       };
-      Navigator.pushNamed(context, '/forecast-today', arguments: searchParams);
+      Navigator.pushNamed(context, ForecastToday.pageRoute, arguments: searchParams);
     };
   }
 }

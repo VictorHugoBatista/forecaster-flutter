@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class ForecastToday extends StatelessWidget {
   String searchText;
 
+  static final String pageRoute = '/forecast-today';
+
   @override
   Widget build(BuildContext context) {
     final Map<String, Object> arguments = ModalRoute.of(context).settings.arguments as Map;

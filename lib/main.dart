@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/' : (context) => Search(),
-        '/forecast-today': (context) => ForecastToday(),
+        Search.pageRoute : (context) => Search(),
+        ForecastToday.pageRoute: (context) => ForecastToday(),
       },
     );
   }
