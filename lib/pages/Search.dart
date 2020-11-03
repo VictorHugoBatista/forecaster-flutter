@@ -4,6 +4,7 @@ import './ForecastToday.dart';
 
 class Search extends StatelessWidget {
   static final String pageRoute = '/';
+  TextEditingController searchController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class Search extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: TextFormField(
+          controller: searchController,
           decoration: InputDecoration(
             border: UnderlineInputBorder(),
             labelText: 'Search your city:',
@@ -30,8 +32,8 @@ class Search extends StatelessWidget {
 
   Function _makeSearchCallback(BuildContext context) {
     return () {
-      const searchParams = <String, Object>{
-        'searchText': 'São Paulo',
+      Map searchParams = <String, Object>{
+        'searchText': this.searchController.text,
       };
       Navigator.pushNamed(context, ForecastToday.pageRoute, arguments: searchParams);
     };
