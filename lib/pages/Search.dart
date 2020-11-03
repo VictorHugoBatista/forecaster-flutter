@@ -17,9 +17,16 @@ class Search extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        tooltip: 'Increment',
+        onPressed: _makeSearchCallback(context),
+        tooltip: 'Search',
         child: Icon(Icons.search),
       ),
     );
+  }
+
+  Function _makeSearchCallback(BuildContext context) {
+    return () {
+      Navigator.pushNamed(context, '/forecast-today');
+    };
   }
 }
