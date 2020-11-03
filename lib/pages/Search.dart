@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './ForecastToday.dart';
+import '../helpers/Alerts.dart';
 
 class Search extends StatelessWidget {
   static final String pageRoute = '/';
@@ -35,6 +36,14 @@ class Search extends StatelessWidget {
       Map searchParams = <String, Object>{
         'searchText': this.searchController.text,
       };
+      if ('' == searchParams['searchText']) {
+        Alerts.show(
+          alertTitle: 'Form',
+          alertText: 'Add the city to search!',
+          context: context,
+        );
+        return;
+      }
       Navigator.pushNamed(context, ForecastToday.pageRoute, arguments: searchParams);
     };
   }
