@@ -26,7 +26,10 @@ class Search extends StatelessWidget {
 
   Function _makeSearchCallback(BuildContext context) {
     return () {
-      Navigator.pushNamed(context, '/forecast-today');
+      const searchParams = <String, Object>{
+        'searchText': 'São Paulo',
+      };
+      Navigator.pushNamed(context, '/forecast-today', arguments: searchParams);
     };
   }
 }
