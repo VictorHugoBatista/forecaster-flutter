@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import './ForecastToday.dart';
 import '../helpers/Alerts.dart';
 
+@immutable
 class Search extends StatelessWidget {
   static final String pageRoute = '/';
-  TextEditingController searchController = new TextEditingController();
+  final TextEditingController searchController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
