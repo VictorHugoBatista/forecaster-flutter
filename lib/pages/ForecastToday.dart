@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ForecastToday extends StatelessWidget {
-  String searchText;
+import '../components/forecast/WeatherDetails.dart';
 
+class ForecastToday extends StatelessWidget {
   static final String pageRoute = '/forecast-today';
+  String searchText;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,11 @@ class ForecastToday extends StatelessWidget {
       appBar: AppBar(
         title: Text('Forecaster - today'),
       ),
-      body: Text('Search ' + (this.searchText ?? '')),
+      body: Column(
+        children: [
+          WeatherDetails(),
+        ],
+      ),
     );
   }
 
