@@ -8,14 +8,24 @@ class WeatherDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Card(
-          child: Column(
-            children: this.children,
+    return Expanded(
+      child: Column(
+        children: [
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+            width: double.infinity,
+            child: Card(
+              child: Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: this.children,
+                ),
+              ),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
