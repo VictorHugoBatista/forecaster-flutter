@@ -7,8 +7,16 @@ class WeatherDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        WeatherDetailsCard(),
-        WeatherDetailsCard(),
+        WeatherDetailsCard(
+          children: [
+            Text('Weather Data'),
+          ],
+        ),
+        WeatherDetailsCard(
+          children: [
+            Text('Weather Data'),
+          ],
+        ),
       ],
     );
   }
