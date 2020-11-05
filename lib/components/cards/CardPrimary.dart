@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class WeatherDetailsCard extends StatelessWidget {
+class CardPrimary extends StatelessWidget {
   final List<Widget> children;
 
-  WeatherDetailsCard({@required this.children});
+  CardPrimary({@required this.children});
 
   @override
   Widget build(BuildContext context) {

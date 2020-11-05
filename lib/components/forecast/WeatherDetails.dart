@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './WeatherDetailsCard.dart';
+import '../cards/CardPrimary.dart';
 import './WeatherDetailsListItem.dart';
 
 class WeatherDetails extends StatelessWidget {
@@ -8,7 +8,7 @@ class WeatherDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        WeatherDetailsCard(
+        CardPrimary(
           children: [
             Center(
               child: Column(
@@ -31,7 +31,7 @@ class WeatherDetails extends StatelessWidget {
             ),
           ],
         ),
-        WeatherDetailsCard(
+        CardPrimary(
           children: [
             Column(
               children: [
