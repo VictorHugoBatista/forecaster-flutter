@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/forecast/WeatherDetails.dart';
+import '../components/forecast/WeatherStatus.dart';
 
 class ForecastToday extends StatelessWidget {
   static final String pageRoute = '/forecast-today';
@@ -15,7 +16,9 @@ class ForecastToday extends StatelessWidget {
         title: Text('Forecaster - today'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          WeatherStatus(),
           WeatherDetails(),
         ],
       ),
