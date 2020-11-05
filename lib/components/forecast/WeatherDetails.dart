@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './WeatherDetailsCard.dart';
+import './WeatherDetailsListItem.dart';
 
 class WeatherDetails extends StatelessWidget {
   @override
@@ -32,7 +33,11 @@ class WeatherDetails extends StatelessWidget {
         ),
         WeatherDetailsCard(
           children: [
-            Text('Weather Data'),
+            Column(
+              children: [
+                WeatherDetailsListItem(),
+              ],
+            ),
           ],
         ),
       ],
