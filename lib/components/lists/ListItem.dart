@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class WeatherDetailsListItem extends StatelessWidget {
+class ListItem extends StatelessWidget {
   final String name;
   final String value;
-  final String unity;
+  final String valueDetail;
 
-  WeatherDetailsListItem({@required this.name, @required this.value, this.unity});
+  ListItem({@required this.name, @required this.value, this.valueDetail});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class WeatherDetailsListItem extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                '${this.value} ${this.unity ?? ''}',
+                '${this.value} ${this.valueDetail ?? ''}',
                 textAlign: TextAlign.right,
                 style: TextStyle(
                   fontSize: 15,
