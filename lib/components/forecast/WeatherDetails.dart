@@ -35,7 +35,31 @@ class WeatherDetails extends StatelessWidget {
           children: [
             Column(
               children: [
-                WeatherDetailsListItem(),
+                WeatherDetailsListItem(
+                  name: 'Feels like',
+                  value: '16',
+                  unity: 'º',
+                ),
+                WeatherDetailsListItem(
+                  name: 'Pressure',
+                  value: '1018',
+                  unity: 'q',
+                ),
+                WeatherDetailsListItem(
+                  name: 'Humity',
+                  value: '72',
+                  unity: '%',
+                ),
+                WeatherDetailsListItem(
+                  name: 'UV',
+                  value: '11.81',
+                  unity: 'qa',
+                ),
+                WeatherDetailsListItem(
+                  name: 'Wind speed',
+                  value: '2.1',
+                  unity: 'KM',
+                ),
               ],
             ),
           ],

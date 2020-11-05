@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class WeatherDetailsListItem extends StatelessWidget {
+  final String name;
+  final String value;
+  final String unity;
+
+  WeatherDetailsListItem({@required this.name, @required this.value, this.unity});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +16,7 @@ class WeatherDetailsListItem extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'A',
+                  this.name,
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                   ),
@@ -21,7 +27,7 @@ class WeatherDetailsListItem extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                Text('B'),
+                Text('${this.value} ${this.unity ?? ''}'),
               ],
             ),
           ),
