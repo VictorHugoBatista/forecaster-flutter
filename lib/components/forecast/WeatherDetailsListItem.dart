@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+@immutable
 class WeatherDetailsListItem extends StatelessWidget {
   final String name;
   final String value;
@@ -10,25 +11,32 @@ class WeatherDetailsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(
+        bottom: 4,
+      ),
       child: Row(
         children: [
           Expanded(
-            child: Column(
-              children: [
-                Text(
-                  this.name,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
+            child: Container(
+              child: Text(
+                this.name,
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
                 ),
-              ],
+              ),
             ),
           ),
           Expanded(
-            child: Column(
-              children: [
-                Text('${this.value} ${this.unity ?? ''}'),
-              ],
+            child: Container(
+              child: Text(
+                '${this.value} ${this.unity ?? ''}',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  fontSize: 15,
+                ),
+              ),
             ),
           ),
         ],
