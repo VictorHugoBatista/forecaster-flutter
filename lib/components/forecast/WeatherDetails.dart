@@ -9,6 +9,7 @@ class WeatherDetails extends StatelessWidget {
     return Row(
       children: [
         CardPrimary(
+          height: 140,
           children: [
             Center(
               child: Column(
@@ -32,6 +33,7 @@ class WeatherDetails extends StatelessWidget {
           ],
         ),
         CardPrimary(
+          height: 140,
           children: [
             Column(
               children: [
